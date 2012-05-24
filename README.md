@@ -28,3 +28,6 @@ Got questions, critique, etc?
 =============================
 Make contact on G+ https://plus.google.com/116424618550408352646
 My personal page: http://k.milnes.biz
+
+How to use
+==========
