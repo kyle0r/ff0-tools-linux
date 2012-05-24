@@ -3,16 +3,15 @@
 printf '\n#-----------------\____________START_SCRIPT_____________/------------------#\n'
 
 me="$(basename $0)"
-working_dir="~/ff0-tools"
+working_dir="/home/Kyle/ff0-tools"
 test_types="f c p t"
 TMP="/tmp"
 tmp_file="$(mktemp ${TMP}/${me}-XXXXXXXXXX)"
 # store some test text in $tmp_file
 printf -- "\n\n2 new lines prepended\nsome copy\n2 new lines appended\n\n\n" > $tmp_file
 
-cd "$working_dir"
 # include the require libs
-. lib/stdin.inc.sh
+. "${working_dir}/lib/stdin.inc.sh"
 
 stdin_tests() {
 	local suffix="\n\n\n"
