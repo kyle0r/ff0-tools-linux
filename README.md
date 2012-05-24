@@ -28,3 +28,6 @@ Got questions, critique, etc?
 =============================
 * Make contact via Github                                       
                                      
+
+How to use
+==========
