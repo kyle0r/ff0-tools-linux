@@ -50,6 +50,18 @@
 #    See README file for contact details and more info.
 #    </copyright>
 
+# HOW/WHAT/WHEN
+# =============
+# The idea behind this script, is to test the stdin and stdout devices for a given shell instance.
+# Given that a shell instance can be interactive, non-interactive, run under cron or ssh etc.
+# Depending on how a shell instance is invokved changes how std devices behave, this script
+# aim to show you the various behaviors. Good for learning about std devices and good for
+# debugging when a std devices is doing what you want.
+
+# TODO
+# ====
+# * Perhaps run similar tests for the 0 1 file handlers, as they behave differently
+
 printf '\n#-----------------\____________START_SCRIPT_____________/------------------#\n'
 
 me="$(basename $0)"
@@ -75,13 +87,7 @@ stdin_tests() {
 	
 	case "$stdin_content_result" in
 		0 ) stdin_content="${stdin_content%x}";;
-		10) stdin_content="$1 is terminal, nothing interesting to do${suffix}";;
-		20) stdin_content="$1 is character device, nothing interesting to do${suffix}";;
-		30) stdin_content="$1 is an empty file${suffix}";;
-		40) stdin_content="$1 is an empty text stream${suffix}";;
-		50) stdin_content="unsuccessful read from $1${suffix}";;
-		60) stdin_content="unsuccessful detection of $1${suffix}";;
-		* ) stdin_content="invalid print_stdin() result - shit is broke!${suffix}"
+		* ) stdin_content="${print_stdin_return[$stdin_content_result]}${suffix}";;
 	esac
 	
 	# not able to store the result of these commands to variables (aka subshell) because
