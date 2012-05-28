@@ -1,0 +1,28 @@
+gtaiv-handling-formatter
+=====
+The problem
+-----
+Due to the inconsistent whitespacing in the handling.dat file, after edits or adding custom cars etc, it can be very hard to quicky visually compare two cars handling settings.
+Personally, I feel this hinders finding good settings and makes the process very time consumping, and poentially lowers the overall quality of custom car releases.
+I personally also find it very frustrating to make edits to cars when I can't compare handling lines easily.
+
+The train of thought was: "I'm tweaking or making car X, its a bit like car Y. So how does car Y do it?"
+
+The solution
+-----
+Once a handling.dat has been formatted by this script, all handling lines will be formatted in human friendly format.
+This should make edits much easier, along with seeing what another car has for a certain value, as a reference when making tweaks.
+Visual diff tools will also be much more useful for comparing before and after changes when both files have been formatted with this script.
+
+Misc.
+-----
+I have tested this under Windows CYGWIN_NT-6.1-WOW64 version 1.7.15
+
+Got questions, critique, etc?
+------
+* Make contact via Github                                         
+                                       
+
+How to use
+------
+TODO.
