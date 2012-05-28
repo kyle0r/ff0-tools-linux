@@ -1,0 +1,1173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigAdd { color: #000000; background-color: #EFEFFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EFEFFF; text-decoration: line-through; }
+td.TextItemInsigDiffMod { color: #000000; background-color: #EFEFFF; }
+td.TextItemInsigLeftMod { color: #000000; background-color: #EFEFFF; }
+td.TextItemInsigRightMod { color: #000000; background-color: #EFEFFF; }
+td.TextItemNum { color: #827357; background-color: #F2F2F2; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+td.TextItemSigDiffMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigLeftMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigRightMod { color: #000000; background-color: #FFE3E3; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+</style>
+<title>Text Compare</title>
+</head>
+<body>
+Text Compare<br/>
+Produced: 28/05/2012 15:48:15<br/>
+&nbsp; &nbsp;
+<br/>
+Mode:&nbsp; All &nbsp;
+<br/>
+Left file: R:\REPOSITORY\FILES\cygwin\home\Kyle\ff0-tools\test-stdin-and-out\results\left.txt &nbsp;
+<br/>
+Right file: R:\REPOSITORY\FILES\cygwin\home\Kyle\ff0-tools\test-stdin-and-out\results\right.txt &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionAll">
+<td class="TextItemSame"># TEST 1</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"># TEST 1</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigDiffMod">#==========================</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">#==========================<span class="TextSegSigDiff">========</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigDiffMod"># RUN VIA INTERACTIVE SHELL</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod"># RUN VIA <span class="TextSegSigDiff">SSH</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">VIA</span><span class="TextSegInsigDiff"> </span>INTERACTIVE SHELL</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigDiffMod">#==========================</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod">#==========================<span class="TextSegSigDiff">========</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------\____________START_SCRIPT_____________/------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------\____________START_SCRIPT_____________/------------------#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-------------------------------/dev/stdin---------------------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-------------------------------/dev/stdin---------------------------------#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-------------testing no input</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-------------testing no input</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigDiffMod">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: <span class="TextSegSigDiff">ch</span><span class="TextSegSigDiff">aracter</span> <span class="TextSegSigDiff">s</span>pe<span class="TextSegSigDiff">cial</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: <span class="TextSegSigDiff">fifo</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(nam</span><span class="TextSegSigDiff">ed</span> <span class="TextSegSigDiff">pi</span>pe<span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: <span class="TextSegSigDiff">character</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">special</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">file</span>, inode: 8<span class="TextSegSigDiff">9</span><span class="TextSegSigDiff">12</span><span class="TextSegSigDiff">89</span>6</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: <span class="TextSegSigDiff">f</span><span class="TextSegSigDiff">i</span><span class="TextSegSigDiff">fo</span>, inode: 8<span class="TextSegSigDiff">34312254951416864</span>6</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegSigDiff">/d</span><span class="TextSegSigDiff">ev/pty0</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegSigDiff">pipe:[376]</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigDiffMod">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a <span class="TextSegSigDiff">character</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">devic</span>e</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a <span class="TextSegSigDiff">p</span><span class="TextSegSigDiff">ip</span>e</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigDiffMod">/dev/stdin content result:&nbsp; <span class="TextSegSigDiff">2</span>0</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod">/dev/stdin content result:&nbsp; <span class="TextSegSigDiff">5</span>0</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod"><span class="TextSegSigDiff">/d</span><span class="TextSegSigDiff">ev/stdin</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">is</span> <span class="TextSegSigDiff">cha</span>r<span class="TextSegSigDiff">acter</span> dev<span class="TextSegSigDiff">ice,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">nothing</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">intere</span>stin<span class="TextSegSigDiff">g</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">do</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod"><span class="TextSegSigDiff">unsucce</span><span class="TextSegSigDiff">s</span><span class="TextSegSigDiff">sful</span> r<span class="TextSegSigDiff">ead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">from</span> <span class="TextSegSigDiff">/</span>dev<span class="TextSegSigDiff">/</span>st<span class="TextSegSigDiff">d</span>in</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------testing pipe input</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------testing pipe input</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: fifo (named pipe)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: fifo (named pipe)</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: fifo, inode: <span class="TextSegSigDiff">53</span><span class="TextSegSigDiff">17067</span><span class="TextSegSigDiff">189523949748</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: fifo, inode: <span class="TextSegSigDiff">360958581</span><span class="TextSegSigDiff">0</span><span class="TextSegSigDiff">744112</span><span class="TextSegSigDiff">506</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[2<span class="TextSegSigDiff">28</span>]</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[2<span class="TextSegSigDiff">44</span>]</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a pipe</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a pipe</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines prepended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines prepended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">some copy</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">some copy</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines appended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines appended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-------testing redirect input</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-------testing redirect input</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: ASCII text</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: ASCII text</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: regular file, inode: <span class="TextSegSigDiff">1</span>030<span class="TextSegSigDiff">198414</span><span class="TextSegSigDiff">7616480</span>2</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: regular file, inode: <span class="TextSegSigDiff">6533</span>03<span class="TextSegSigDiff">42</span>0<span class="TextSegSigDiff">9</span><span class="TextSegSigDiff">45497</span>2<span class="TextSegSigDiff">79</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /tmp/test_stdin_and_out.sh-<span class="TextSegSigDiff">He9</span><span class="TextSegSigDiff">uuDkWYF</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /tmp/test_stdin_and_out.sh-<span class="TextSegSigDiff">Ti2J4xGu2</span><span class="TextSegSigDiff">y</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a file</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a file</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines prepended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines prepended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">some copy</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">some copy</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines appended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines appended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#------------------------------/dev/stdout---------------------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#------------------------------/dev/stdout---------------------------------#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#---------------testing stdout</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#---------------testing stdout</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdout: fifo (named pipe)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdout: fifo (named pipe)</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdout: type: fifo, inode: <span class="TextSegSigDiff">1</span><span class="TextSegSigDiff">65110937</span>88<span class="TextSegSigDiff">004</span><span class="TextSegSigDiff">585154</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdout: type: fifo, inode: <span class="TextSegSigDiff">841136</span><span class="TextSegSigDiff">9</span>88<span class="TextSegSigDiff">2667653762</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdout -&gt; /proc/self/fd/1</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdout -&gt; /proc/self/fd/1</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[6<span class="TextSegSigDiff">32</span>]</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[6<span class="TextSegSigDiff">44</span>]</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">/dev/stdout test result:&nbsp; /dev/stdout is a pipe</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">/dev/stdout test result:&nbsp; /dev/stdout is a pipe</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------\_____________END_SCRIPT______________/------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------\_____________END_SCRIPT______________/------------------#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"># TEST 2</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># TEST 2</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigDiffMod">#==========================</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">#==========================<span class="TextSegSigDiff">==================</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigDiffMod"># RUN VIA <span class="TextSegInsigDiff">IN</span><span class="TextSegSigDiff">T</span><span class="TextSegSigDiff">ERACTIVE</span> <span class="TextSegSigDiff">SHELL</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod"># RUN VIA <span class="TextSegSigDiff">CRON</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(&lt;/dev/null,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">m</span><span class="TextSegInsigDiff">in</span><span class="TextSegSigDiff">imal</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">en</span><span class="TextSegSigDiff">v,</span> <span class="TextSegSigDiff">etc)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigDiffMod">#==========================</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod">#==========================<span class="TextSegSigDiff">==================</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------\____________START_SCRIPT_____________/------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------\____________START_SCRIPT_____________/------------------#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-------------------------------/dev/stdin---------------------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-------------------------------/dev/stdin---------------------------------#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-------------testing no input</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-------------testing no input</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigDiffMod">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: <span class="TextSegSigDiff">ch</span><span class="TextSegSigDiff">aracter</span> <span class="TextSegSigDiff">s</span>pe<span class="TextSegSigDiff">cial</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: <span class="TextSegSigDiff">fifo</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(nam</span><span class="TextSegSigDiff">ed</span> <span class="TextSegSigDiff">pi</span>pe<span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: <span class="TextSegSigDiff">character</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">special</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">file</span>, inode: <span class="TextSegSigDiff">8</span>9<span class="TextSegSigDiff">1</span><span class="TextSegSigDiff">28</span><span class="TextSegSigDiff">96</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: <span class="TextSegSigDiff">f</span><span class="TextSegSigDiff">i</span><span class="TextSegSigDiff">fo</span>, inode: 9<span class="TextSegSigDiff">165263727102034497</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegSigDiff">/d</span><span class="TextSegSigDiff">ev/pty</span>0</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegSigDiff">pipe:[44</span>0<span class="TextSegSigDiff">]</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigDiffMod">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a <span class="TextSegSigDiff">character</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">devic</span>e</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a <span class="TextSegSigDiff">p</span><span class="TextSegSigDiff">ip</span>e</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigDiffMod">/dev/stdin content result:&nbsp; <span class="TextSegSigDiff">2</span>0</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod">/dev/stdin content result:&nbsp; <span class="TextSegSigDiff">5</span>0</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod"><span class="TextSegSigDiff">/d</span><span class="TextSegSigDiff">ev/stdin</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">is</span> <span class="TextSegSigDiff">cha</span>r<span class="TextSegSigDiff">acter</span> dev<span class="TextSegSigDiff">ice,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">nothing</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">intere</span>stin<span class="TextSegSigDiff">g</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">do</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod"><span class="TextSegSigDiff">unsucce</span><span class="TextSegSigDiff">s</span><span class="TextSegSigDiff">sful</span> r<span class="TextSegSigDiff">ead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">from</span> <span class="TextSegSigDiff">/</span>dev<span class="TextSegSigDiff">/</span>st<span class="TextSegSigDiff">d</span>in</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------testing pipe input</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------testing pipe input</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: fifo (named pipe)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: fifo (named pipe)</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: fifo, inode: <span class="TextSegSigDiff">5317067189</span>52<span class="TextSegSigDiff">3</span>94<span class="TextSegSigDiff">9</span>748</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: fifo, inode: <span class="TextSegSigDiff">12</span>529<span class="TextSegSigDiff">2</span>474<span class="TextSegSigDiff">831</span>8<span class="TextSegSigDiff">3418503</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[22<span class="TextSegSigDiff">8</span>]</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[22<span class="TextSegSigDiff">4</span>]</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a pipe</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a pipe</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines prepended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines prepended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">some copy</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">some copy</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines appended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines appended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-------testing redirect input</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-------testing redirect input</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: ASCII text</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: ASCII text</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: regular file, inode: <span class="TextSegSigDiff">10</span><span class="TextSegSigDiff">3</span>01<span class="TextSegSigDiff">9841476164802</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: regular file, inode: <span class="TextSegSigDiff">66287357</span>01<span class="TextSegSigDiff">536595</span><span class="TextSegSigDiff">79</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /tmp/test<span class="TextSegSigDiff">_</span>stdin<span class="TextSegSigDiff">_</span>and<span class="TextSegSigDiff">_</span>out.sh-<span class="TextSegSigDiff">He9uu</span><span class="TextSegSigDiff">DkWYF</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /tmp/test<span class="TextSegSigDiff">-</span>stdin<span class="TextSegSigDiff">-</span>and<span class="TextSegSigDiff">-</span>out.sh-<span class="TextSegSigDiff">pwbXCRIDxx</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a file</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a file</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines prepended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines prepended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">some copy</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">some copy</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines appended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines appended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#------------------------------/dev/stdout---------------------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#------------------------------/dev/stdout---------------------------------#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#---------------testing stdout</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#---------------testing stdout</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdout: fifo (named pipe)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdout: fifo (named pipe)</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdout: type: fifo, inode: <span class="TextSegSigDiff">165110</span>93<span class="TextSegSigDiff">7</span><span class="TextSegSigDiff">88</span><span class="TextSegSigDiff">00458515</span>4</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdout: type: fifo, inode: <span class="TextSegSigDiff">7</span><span class="TextSegSigDiff">08</span>93<span class="TextSegSigDiff">3377582202367</span>4</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdout -&gt; /proc/self/fd/1</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdout -&gt; /proc/self/fd/1</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[63<span class="TextSegSigDiff">2</span>]</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[63<span class="TextSegSigDiff">6</span>]</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">/dev/stdout test result:&nbsp; /dev/stdout is a pipe</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">/dev/stdout test result:&nbsp; /dev/stdout is a pipe</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------\_____________END_SCRIPT______________/------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------\_____________END_SCRIPT______________/------------------#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"># TEST 3</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># TEST 3</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigDiffMod">#===================================</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">#===================================<span class="TextSegSigDiff">=================</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigDiffMod"># RUN VIA SSH VIA <span class="TextSegInsigDiff">IN</span><span class="TextSegSigDiff">T</span><span class="TextSegSigDiff">ERACTIVE</span> <span class="TextSegSigDiff">SHELL</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod"># RUN VIA SSH VIA <span class="TextSegSigDiff">CRON</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(&lt;/dev/null,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">m</span><span class="TextSegInsigDiff">in</span><span class="TextSegSigDiff">imal</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">en</span><span class="TextSegSigDiff">v,</span> <span class="TextSegSigDiff">etc)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigDiffMod">#===================================</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigDiffMod">#===================================<span class="TextSegSigDiff">=================</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------\____________START_SCRIPT_____________/------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------\____________START_SCRIPT_____________/------------------#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-------------------------------/dev/stdin---------------------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-------------------------------/dev/stdin---------------------------------#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-------------testing no input</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-------------testing no input</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: fifo (named pipe)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: fifo (named pipe)</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: fifo, inode: <span class="TextSegSigDiff">834312</span><span class="TextSegSigDiff">254</span><span class="TextSegSigDiff">9</span>514<span class="TextSegSigDiff">168646</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: fifo, inode: <span class="TextSegSigDiff">176902</span><span class="TextSegSigDiff">48997628381</span>514</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[376]</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[376]</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a pipe</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a pipe</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 50</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 50</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">unsuccessful read from /dev/stdin</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">unsuccessful read from /dev/stdin</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------testing pipe input</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------testing pipe input</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: fifo (named pipe)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: fifo (named pipe)</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: fifo, inode: <span class="TextSegSigDiff">3</span><span class="TextSegSigDiff">60958581</span><span class="TextSegSigDiff">0744112</span><span class="TextSegSigDiff">506</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: fifo, inode: <span class="TextSegSigDiff">118627</span><span class="TextSegSigDiff">8</span><span class="TextSegSigDiff">802630</span><span class="TextSegSigDiff">159357</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[244]</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[244]</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a pipe</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a pipe</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines prepended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines prepended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">some copy</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">some copy</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines appended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines appended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-------testing redirect input</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-------testing redirect input</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: ASCII text</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdin: ASCII text</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: regular file, inode: <span class="TextSegSigDiff">6533034209454</span>97<span class="TextSegSigDiff">2</span><span class="TextSegSigDiff">79</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdin: type: regular file, inode: <span class="TextSegSigDiff">258</span><span class="TextSegSigDiff">9</span><span class="TextSegSigDiff">56</span>97<span class="TextSegSigDiff">857445056</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdin -&gt; /proc/self/fd/0</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /tmp/test<span class="TextSegSigDiff">_</span>stdin<span class="TextSegSigDiff">_</span>and<span class="TextSegSigDiff">_</span>out.sh-<span class="TextSegInsigDiff">T</span><span class="TextSegSigDiff">i2</span><span class="TextSegSigDiff">J4</span><span class="TextSegSigDiff">xGu2y</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /tmp/test<span class="TextSegSigDiff">-</span>stdin<span class="TextSegSigDiff">-</span>and<span class="TextSegSigDiff">-</span>out.sh-<span class="TextSegInsigDiff">t</span><span class="TextSegSigDiff">9WSJmxlxn</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a file</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">/dev/stdin test result:&nbsp; &nbsp;&nbsp; /dev/stdin is a file</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin content result:&nbsp; 0</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/dev/stdin textstream content:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines prepended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines prepended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">some copy</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">some copy</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">2 new lines appended</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">2 new lines appended</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#------------------------------/dev/stdout---------------------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#------------------------------/dev/stdout---------------------------------#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#---------------testing stdout</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#---------------testing stdout</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#-----------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------------------</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdout: fifo (named pipe)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">file result:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /dev/stdout: fifo (named pipe)</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdout: type: fifo, inode: <span class="TextSegSigDiff">8</span><span class="TextSegSigDiff">4113698826</span><span class="TextSegSigDiff">6765</span>37<span class="TextSegSigDiff">62</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">stat results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; /dev/stdout: type: fifo, inode: <span class="TextSegSigDiff">1424</span><span class="TextSegSigDiff">6</span><span class="TextSegSigDiff">80</span><span class="TextSegSigDiff">6901796268</span>37<span class="TextSegSigDiff">3</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdout -&gt; /proc/self/fd/1</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">ls results:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; lrwxrwxrwx 1 Kyle None 15 May&nbsp; 5 01:21 /dev/stdout -&gt; /proc/self/fd/1</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[6<span class="TextSegSigDiff">44</span>]</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigDiffMod">readlink results:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; pipe:[6<span class="TextSegSigDiff">92</span>]</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">/dev/stdout test result:&nbsp; /dev/stdout is a pipe</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">/dev/stdout test result:&nbsp; /dev/stdout is a pipe</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#--------------------end test</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#--------------------end test</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">#-----------------\_____________END_SCRIPT______________/------------------#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#-----------------\_____________END_SCRIPT______________/------------------#</td>
+</tr>
+</table>
+<br/>
+</body>
+</html>
