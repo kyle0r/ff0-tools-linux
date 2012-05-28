@@ -72,7 +72,7 @@ tmp_file="$(mktemp ${TMP}/${me}-XXXXXXXXXX)"
 # store some test text in $tmp_file
 printf -- "\n\n2 new lines prepended\nsome copy\n2 new lines appended\n\n\n" > $tmp_file
 
-# include the require libs
+# include the required libs
 . "${working_dir}/lib/stdin.inc.sh"
 
 stdin_tests() {
