@@ -1,0 +1,224 @@
+# TEST 1
+#==========================
+# RUN VIA INTERACTIVE SHELL
+#==========================
+
+#-----------------\____________START_SCRIPT_____________/------------------#
+
+#-------------------------------/dev/stdin---------------------------------#
+#-------------testing no input
+#-----------------------------
+file result:                /dev/stdin: character special
+stat results:               /dev/stdin: type: character special file, inode: 8912896
+ls results:                 lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdin -> /proc/self/fd/0
+readlink results:           /dev/pty0
+/dev/stdin test result:     /dev/stdin is a character device
+/dev/stdin content result:  20
+/dev/stdin textstream content:
+/dev/stdin is character device, nothing interesting to do
+
+
+#--------------------end test
+
+#-----------testing pipe input
+#-----------------------------
+file result:                /dev/stdin: fifo (named pipe)
+stat results:               /dev/stdin: type: fifo, inode: 5317067189523949748
+ls results:                 lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdin -> /proc/self/fd/0
+readlink results:           pipe:[228]
+/dev/stdin test result:     /dev/stdin is a pipe
+/dev/stdin content result:  0
+/dev/stdin textstream content:
+
+
+2 new lines prepended
+some copy
+2 new lines appended
+
+
+#--------------------end test
+
+#-------testing redirect input
+#-----------------------------
+file result:                /dev/stdin: ASCII text
+stat results:               /dev/stdin: type: regular file, inode: 103019841476164802
+ls results:                 lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdin -> /proc/self/fd/0
+readlink results:           /tmp/test_stdin_and_out.sh-He9uuDkWYF
+/dev/stdin test result:     /dev/stdin is a file
+/dev/stdin content result:  0
+/dev/stdin textstream content:
+
+
+2 new lines prepended
+some copy
+2 new lines appended
+
+
+#--------------------end test
+
+
+#------------------------------/dev/stdout---------------------------------#
+#---------------testing stdout
+#-----------------------------
+file result:              /dev/stdout: fifo (named pipe)
+stat results:             /dev/stdout: type: fifo, inode: 16511093788004585154
+ls results:               lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdout -> /proc/self/fd/1
+readlink results:         pipe:[632]
+/dev/stdout test result:  /dev/stdout is a pipe
+#--------------------end test
+
+#-----------------\_____________END_SCRIPT______________/------------------#
+
+
+
+
+
+
+
+# TEST 2
+#==========================
+# RUN VIA INTERACTIVE SHELL
+#==========================
+
+#-----------------\____________START_SCRIPT_____________/------------------#
+
+#-------------------------------/dev/stdin---------------------------------#
+#-------------testing no input
+#-----------------------------
+file result:                /dev/stdin: character special
+stat results:               /dev/stdin: type: character special file, inode: 8912896
+ls results:                 lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdin -> /proc/self/fd/0
+readlink results:           /dev/pty0
+/dev/stdin test result:     /dev/stdin is a character device
+/dev/stdin content result:  20
+/dev/stdin textstream content:
+/dev/stdin is character device, nothing interesting to do
+
+
+#--------------------end test
+
+#-----------testing pipe input
+#-----------------------------
+file result:                /dev/stdin: fifo (named pipe)
+stat results:               /dev/stdin: type: fifo, inode: 5317067189523949748
+ls results:                 lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdin -> /proc/self/fd/0
+readlink results:           pipe:[228]
+/dev/stdin test result:     /dev/stdin is a pipe
+/dev/stdin content result:  0
+/dev/stdin textstream content:
+
+
+2 new lines prepended
+some copy
+2 new lines appended
+
+
+#--------------------end test
+
+#-------testing redirect input
+#-----------------------------
+file result:                /dev/stdin: ASCII text
+stat results:               /dev/stdin: type: regular file, inode: 103019841476164802
+ls results:                 lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdin -> /proc/self/fd/0
+readlink results:           /tmp/test_stdin_and_out.sh-He9uuDkWYF
+/dev/stdin test result:     /dev/stdin is a file
+/dev/stdin content result:  0
+/dev/stdin textstream content:
+
+
+2 new lines prepended
+some copy
+2 new lines appended
+
+
+#--------------------end test
+
+
+#------------------------------/dev/stdout---------------------------------#
+#---------------testing stdout
+#-----------------------------
+file result:              /dev/stdout: fifo (named pipe)
+stat results:             /dev/stdout: type: fifo, inode: 16511093788004585154
+ls results:               lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdout -> /proc/self/fd/1
+readlink results:         pipe:[632]
+/dev/stdout test result:  /dev/stdout is a pipe
+#--------------------end test
+
+#-----------------\_____________END_SCRIPT______________/------------------#
+
+
+
+
+
+
+
+# TEST 3
+#===================================
+# RUN VIA SSH VIA INTERACTIVE SHELL
+#===================================
+
+#-----------------\____________START_SCRIPT_____________/------------------#
+
+#-------------------------------/dev/stdin---------------------------------#
+#-------------testing no input
+#-----------------------------
+file result:                /dev/stdin: fifo (named pipe)
+stat results:               /dev/stdin: type: fifo, inode: 8343122549514168646
+ls results:                 lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdin -> /proc/self/fd/0
+readlink results:           pipe:[376]
+/dev/stdin test result:     /dev/stdin is a pipe
+/dev/stdin content result:  50
+/dev/stdin textstream content:
+unsuccessful read from /dev/stdin
+
+
+#--------------------end test
+
+#-----------testing pipe input
+#-----------------------------
+file result:                /dev/stdin: fifo (named pipe)
+stat results:               /dev/stdin: type: fifo, inode: 3609585810744112506
+ls results:                 lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdin -> /proc/self/fd/0
+readlink results:           pipe:[244]
+/dev/stdin test result:     /dev/stdin is a pipe
+/dev/stdin content result:  0
+/dev/stdin textstream content:
+
+
+2 new lines prepended
+some copy
+2 new lines appended
+
+
+#--------------------end test
+
+#-------testing redirect input
+#-----------------------------
+file result:                /dev/stdin: ASCII text
+stat results:               /dev/stdin: type: regular file, inode: 653303420945497279
+ls results:                 lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdin -> /proc/self/fd/0
+readlink results:           /tmp/test_stdin_and_out.sh-Ti2J4xGu2y
+/dev/stdin test result:     /dev/stdin is a file
+/dev/stdin content result:  0
+/dev/stdin textstream content:
+
+
+2 new lines prepended
+some copy
+2 new lines appended
+
+
+#--------------------end test
+
+
+#------------------------------/dev/stdout---------------------------------#
+#---------------testing stdout
+#-----------------------------
+file result:              /dev/stdout: fifo (named pipe)
+stat results:             /dev/stdout: type: fifo, inode: 8411369882667653762
+ls results:               lrwxrwxrwx 1 Kyle None 15 May  5 01:21 /dev/stdout -> /proc/self/fd/1
+readlink results:         pipe:[644]
+/dev/stdout test result:  /dev/stdout is a pipe
+#--------------------end test
+
+#-----------------\_____________END_SCRIPT______________/------------------#
