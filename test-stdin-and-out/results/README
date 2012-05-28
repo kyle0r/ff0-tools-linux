@@ -1,0 +1,7 @@
+test-stdin-and-out results
+======
+left and right files are the source of the visual diff, which was produced with Beyond Compare 3 from http://www.scootersoftware.com/.
+
+I've provided this to show how stdin and out behaves under different circumstances.
+
+The results were produced with CYGWIN_NT-6.1-WOW64 version 1.7.15
