@@ -57,7 +57,7 @@
 
 # The basic approach is:
 # 1. determine the line the actual handling config lines start, in the original R* file this is demarked by > THE DATA <
-# 2. from the determined start point, awk through the handling file, formating in a human readable way, store to file
+# 2. from the determined start point, awk through the handling file, formatting in a human readable way, store to file
 # 3. when awk matches non interesting handling config lines, exit, storing while line it stopped processing
 # 4. stitch everything together
 
@@ -84,6 +84,7 @@ debug=true
 
 # variable declarations
 handling_file="$(cygpath 'S:\!Installed Games\Steam\steamapps\common\grand theft auto iv\GTAIV\common\data\handling.dat')"
+#handling_file="$(cygpath 'S:\Program Files\SparkIV 0.6.9\mods\ultimate_vehicle_pack_v9_extracted\GTAIV-pack\common\data\handling.dat')"
 #handling_file="$(cygpath 'S:\Program Files\SparkIV 0.6.9\mods\ultimate_vehicle_pack_v9_extracted\TBoGT-pack\common\data\handling.dat')"
 handling_file_human_readable="$handling_file.new"
 handling_file_dir=$(dirname "$handling_file")
@@ -120,46 +121,57 @@ new_handing_file_part3=$(mktemp $tmp_file_template)
 
 print_debug "awk will start on line $which_line_to_start_awk"
 
+# FIX ME translating tabs to spaces, this is probably what is causing whitespace issues
+# this current allows column -t -x to work, but perhaps its not needed or should be done inline?
 tr '\t' ' ' < "$handling_file" |
 awk -v group_header_file=$group_header_file -v start_line=$which_line_to_start_awk -v stop_line=$which_line_did_awk_stop_file '
 BEGIN {
 	command = "column -t -x"
 	group_header_written = 0
 }
+NR < start_line { next } # skip non-interesting lines
+{
+	#print "debugline: "NR": "$0 > "/dev/stderr" # debug
+}
 # deal with group header lines
 NR > start_line && /^; name/ {
-	#print NR > "/dev/stderr" # debug
+	#print NR"group hearder line" > "/dev/stderr" # debug
 	if ($1$2 == ";name" && 0 == group_header_written) {
-		printf $1$2"\t\t"$3"\t "$4"  "$5" "$6"\t      "$7"\t\t  "$8"\t    "$9" "$10"\t\t  "$11"\t\t\t\t       "$12"\t\t    "$13"  "$14"     "$15"    "$16"    "$17"\n" > group_header_file
+		printf $1" "$2"          "$3"     "$4"  "$5" "$6"       "$7"                "$8"            "$9" "$10"                  "$11"                               "$12"              "$13"  "$14"     "$15"    "$16"   "$17"\n" > group_header_file
+		#printf $1$2"\t\t"$3"\t "$4"  "$5" "$6"\t      "$7"\t\t  "$8"\t    "$9" "$10"\t\t  "$11"\t\t\t\t       "$12"\t\t    "$13"  "$14"     "$15"    "$16"    "$17"\n" > group_header_file
 		group_header_written = 1
 	}
 	if ($1$2 == ";name") {
 		print "%GROUP_HEADER%" | command
 	}
 }
-# deal with the actual handling config lines, the ones we want to be human readable
-NR > start_line && ( /^[A-Z]/ || /^#[A-Z]/ || /^; A.*Ma$/ || /^;([[:blank:]]+)?$/ ) {
-	#print NR > "/dev/stderr" # debug
-	if ($1$2 == ";A") {
-		header = $1$2" "
-		for (i=3;i<=NF;i++) header = header $i" "
-		header = header "\n"
-		print header | command
-	} else {
-		print $0 | command
-	}
+# deal with header lines
+/^; A.*Ma$/ {
+	#print NR"header line" > "/dev/stderr" # debug
+	header = ";:h:"$2" "
+	for (i=3;i<=NF;i++) header = header $i" "
+	header = header "\n"
+	print header | command
 }
-# deal with pesky category lines
-NR > start_line && /^;-/ {
-	#print NR > "/dev/stderr" # debug
-	category = gensub("[- ]", "", "g")
+# deal with the actual handling config lines, the ones we want to be human readable
+NR > start_line && ( /^[A-Z]/ || /^#[A-Z]/ ) {
+	#print NR"config line" > "/dev/stderr" # debug
+	printf "%s %.01f %.01f %2d %.02f %.02f %.02f %.02f %1d %.02f %.02f %03d %.02f %.02f %.02f %.01f %.02f %.02f %.01f %.02f %.02f %.01f %.01f %.01f %.02f %.02f %.02f %.02f %.01f %.01f %.01f %.01f %.02f %-6d %-8d %-8d %-2d\n", $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37 | command
+}
+/^;([[:blank:]]+)?$/ || /^;:c:/ || /^;:h:/ {
+	print $0 | command
+}
+# deal with category lines
+NR > start_line && ( /^;-+/ ) {
+	#print NR"category line" > "/dev/stderr" # debug
+	category = ";:c:" gensub("[- ]", "", "g")
 	print category | command
 	
 }
 # as soon as a line that is not of interest is matched, store the line number in stop_line file and exit
 # non interesting lines are those lines which have not prevoiusly matched above, perhaps there is a better
 # way of expressing that in awk?
-NR > start_line && ! ( /^[A-Z]/ || /^#[A-Z]/ || /^; A.*Ma$/ || /^;([[:blank:]]+)?$/ || /^; name/ || /^;-/ ) {
+NR > start_line && ! ( /^[A-Z]/ || /^#[A-Z]/ || /^; A.*Ma$/ || /^;([[:blank:]]+)?$/ || /^; name/ || /^;-+/ || /^;:c:/ || /^;:h:/ ) {
 	print NR > stop_line
 	exit
 }
@@ -184,6 +196,10 @@ cat $new_handing_file_part{1,2,3} > "$handling_file_human_readable"
 
 print_debug "========== CLEAN UP =========="
 rm -rv $tmp_working_dir | print_debug
+
+# debug
+#less "$handling_file_human_readable"
+#exit
 
 print_debug "========== VALIDATION =========="
 print_debug "File line counts:"
