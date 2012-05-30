@@ -85,7 +85,7 @@ debug=true
 # variable declarations
 handling_file="$(cygpath 'S:\!Installed Games\Steam\steamapps\common\grand theft auto iv\GTAIV\common\data\handling.dat')"
 #handling_file="$(cygpath 'S:\Program Files\SparkIV 0.6.9\mods\ultimate_vehicle_pack_v9_extracted\GTAIV-pack\common\data\handling.dat')"
-#handling_file="$(cygpath 'S:\Program Files\SparkIV 0.6.9\mods\ultimate_vehicle_pack_v9_extracted\TBoGT-pack\common\data\handling.dat')"
+#handling_file="$(cygpath 'S:\Program Files\SparkIV 0.6.9\mods\ultimate_vehicle_pack_v9_extracted\GTAIV-orig\common\data\handling.dat')"
 handling_file_human_readable="$handling_file.new"
 handling_file_dir=$(dirname "$handling_file")
 
@@ -121,9 +121,8 @@ new_handing_file_part3=$(mktemp $tmp_file_template)
 
 print_debug "awk will start on line $which_line_to_start_awk"
 
-# FIX ME translating tabs to spaces, this is probably what is causing whitespace issues
-# this current allows column -t -x to work, but perhaps its not needed or should be done inline?
-tr '\t' ' ' < "$handling_file" |
+# FIXME can awk now be used to process the whole file?
+# FIXME now that fixed width is being used for formatting, can column use be removed?
 awk -v group_header_file=$group_header_file -v start_line=$which_line_to_start_awk -v stop_line=$which_line_did_awk_stop_file '
 BEGIN {
 	command = "column -t -x"
@@ -156,7 +155,8 @@ NR > start_line && /^; name/ {
 # deal with the actual handling config lines, the ones we want to be human readable
 NR > start_line && ( /^[A-Z]/ || /^#[A-Z]/ ) {
 	#print NR"config line" > "/dev/stderr" # debug
-	printf "%s %.01f %.01f %2d %.02f %.02f %.02f %.02f %1d %.02f %.02f %03d %.02f %.02f %.02f %.01f %.02f %.02f %.01f %.02f %.02f %.01f %.01f %.01f %.02f %.02f %.02f %.02f %.01f %.01f %.01f %.01f %.02f %-6d %-8d %-8d %-2d\n", $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37 | command
+	# note that column 34: Mv is difficult to fix width, suggestins welcome, padding with space is easy, but column will correct it
+	printf "%s %.01f %.01f %2d %.02f %.02f %.02f %.02f %1d %.02f %.02f %03d %.02f %.02f %.02f %.01f %.02f %.02f %.01f %.02f %.02f %.01f %.01f %.01f %.02f %.02f %.02f %.02f %.01f %.01f %.01f %.01f %.02f %-8d %-8d %-8d %-2d\n", $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37 | command
 }
 /^;([[:blank:]]+)?$/ || /^;:c:/ || /^;:h:/ {
 	print $0 | command
@@ -175,7 +175,7 @@ NR > start_line && ! ( /^[A-Z]/ || /^#[A-Z]/ || /^; A.*Ma$/ || /^;([[:blank:]]+)
 	print NR > stop_line
 	exit
 }
-' > $new_handing_file_part2
+' "$handling_file" > $new_handing_file_part2
 
 # set variables post awk
 group_header_line=$(< $group_header_file)
